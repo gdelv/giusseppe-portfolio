@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* setup */
+html,
+body,
+.holster {
+  height: 100vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.holster {
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+  font-family: monospace;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  display: flex;
+  /* Change overflow != auto/scroll for scroll snap to work */
+  overflow: auto;  
+  outline: 1px dashed lightgray;
+  flex: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container.y {
+  width: 100%;
+  height: 100vh;
+  flex-flow: column nowrap;
+}
+/* scroll-snap */
+
+.y.mandatory-scroll-snapping {
+  scroll-snap-type: y mandatory;
+}
+
+.container > div {
+  text-align: center;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+  flex: none;
+}
+
+
+.y.container > div {
+  line-height: 256px;
+  font-size: 128px;
+  width: 100%;
+  height: 100vh;
+}
+/* appearance fixes */
+.y.container > div:first-child {
+  line-height: 1.3;
+  font-size: 64px;
+}
+/* coloration */
+.container > div:nth-child(even) {
+  background-color: #87ea87;
+}
+
+.container > div:nth-child(odd) {
+  background-color: #87ccea;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  /* transform: translateX(-100%); */
+  /* animation-delay: 2s; */
+  transition: all 2s;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  /* transform: translateX(0); */
 }
