@@ -12,12 +12,13 @@ import { useInView } from 'react-intersection-observer';
 export const Test = () => {
   const { ref, inView, entry } = useInView({
     /* Optional options */
-    threshold: 0.9,
+    threshold: .1,
   });
 
+  console.log(entry, 'this be the entry')
   return (
     <div ref={ref}>
-      <h2 className={inView ? 'show' : 'hidden'}>{`Header inside viewport ${inView}.`}</h2>
+      <h2 className={inView ? 'show' : 'hidden hide-right'}>{`Header inside viewport ${inView}.`}</h2>
     </div>
   );
 };

@@ -20,7 +20,7 @@ h2 {
 .container {
   display: flex;
   /* Change overflow != auto/scroll for scroll snap to work */
-  overflow: auto;  
+  overflow: scroll;  
   outline: 1px dashed lightgray;
   flex: none;
 }
@@ -38,7 +38,7 @@ h2 {
 
 .container > div {
   text-align: center;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   scroll-snap-stop: always;
   flex: none;
 }
@@ -50,7 +50,6 @@ h2 {
   width: 100%;
   height: 100vh;
 }
-/* appearance fixes */
 .y.container > div:first-child {
   line-height: 1.3;
   font-size: 64px;
@@ -65,16 +64,40 @@ h2 {
 }
 
 .hidden {
-  /* opacity: 0; */
+  opacity: 0; 
   filter: blur(5px);
+  /* transform: translateX(-100%); */
+  /* animation-delay: 2s; */
+  transition: show 2s;
+}
+.hide-left {
   transform: translateX(-100%);
-  animation-delay: 2s;
-  transition: all 2s;
+}
+.hide-right {
+  transform: translateX(100%);
 }
 .show {
-  /* opacity: 1; */
+  opacity: 1;
   filter: blur(0);
   transform: translateX(0);
-  /* animation-delay: .5s; */
+  animation-delay: .5s;
   transition: all 2s;
 }
+
+ /* Navbar */
+ .navbar {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: transparent;
+ }
+ .navbar a {
+  text-decoration: none;
+  color: green;
+  padding: 1em;
+ }
+ .dinosaur {
+  width: 22vw;
+ }

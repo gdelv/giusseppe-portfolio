@@ -1,5 +1,7 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import "./App.css";
+import Intro from "./Intro";
+import Nav from "./Nav";
 import { Test } from "./Test";
 
 function App() {
@@ -31,16 +33,20 @@ function App() {
 //     // };
 // }, []);
   return (
+    <>
+    <Nav/>
     <div class="holster">
       <div class="container y mandatory-scroll-snapping" dir="ltr">
-        <div className="page">1</div>
-        <div className="page">2</div>
+        <Intro/>
+        {/* <div className="page">1</div>
+        <div className="page">2</div> */}
         <Test/>
-        <div id="giusseppe" className="page">3</div>
+        {/* <div id="giusseppe" className="page">3</div>
         <div className="page">4</div>
-        <div className="page">5</div>
+        <div className="page">5</div> */}
       </div>
     </div>
+    </>
   );
 }
 
