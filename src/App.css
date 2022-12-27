@@ -20,7 +20,8 @@ h2 {
 .container {
   display: flex;
   /* Change overflow != auto/scroll for scroll snap to work */
-  overflow: scroll;  
+  overflow-y: scroll; 
+  overflow-x: hidden; 
   outline: 1px dashed lightgray;
   flex: none;
 }
@@ -56,11 +57,12 @@ h2 {
 }
 /* coloration */
 .container > div:nth-child(even) {
-  background-color: #87ea87;
+  background-color: #ea8787;
 }
 
 .container > div:nth-child(odd) {
-  background-color: #87ccea;
+  background-color: #ee3325;
+  color: white;
 }
 
 .hidden {
