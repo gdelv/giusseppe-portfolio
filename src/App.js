@@ -4,6 +4,7 @@ import "./App.css";
 import Contact from "./components/Contact";
 import Intro from "./components/Intro";
 import Nav from "./components/shared/Nav";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div class="container y mandatory-scroll-snapping" dir="ltr">
         <Intro/>
         <About/>
+        <Projects/>
         <Contact/>
       </div>
     </div>
