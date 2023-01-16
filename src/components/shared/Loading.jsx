@@ -1,13 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import eggImg from '../../data/images/egg.png'
 import eggBreakImg from '../../data/images/eggcrack.png'
 import dinoImg from '../../data/images/dinosaur.png'
+import THRESHOLD from '../../data/constants'
 import { useInView } from "react-intersection-observer";
 
 export default function Loading() {
+  const [showImg, setShowImg] = useState(true)
     const { ref, inView, entry } = useInView({
         /* Optional options */
-        threshold: 0.9,
+        threshold: THRESHOLD,
       });
       console.log(entry, "this be the entry");
       setTimeout(() => {
@@ -19,9 +21,11 @@ export default function Loading() {
           behavior: 'smooth',
           inline: 'center'
         });
+        setShowImg(false)
       }, 6000);
       
   return (
+      showImg ? 
     <div ref={ref} className='loading-container'>
         <img
         width="200"
@@ -46,8 +50,9 @@ export default function Loading() {
         src={dinoImg}
         alt="dinosaur"
         srcset=""
-      />
+      /> 
       <h2 className={ inView ? 'welcome-banner': ""}>Welcome!</h2>
     </div>
+    : null
   )
 }

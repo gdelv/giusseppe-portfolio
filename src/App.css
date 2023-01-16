@@ -158,7 +158,7 @@ h2 {
 
  @keyframes opacity {
   0%   {
-    opacity:1.8; 
+    opacity:1; 
     top:0px;
   }
   25%  {
@@ -216,4 +216,28 @@ h2 {
   z-index: 9999;
   position: absolute;
   color: black;
+}
+@keyframes show-title {
+  0%   {
+    opacity: 0; 
+    /* top:0px; */
+  }
+  25%  {
+    opacity: .25; 
+  }
+  50%  {
+    opacity: .5; 
+  }
+  75%  {
+    opacity: .75; 
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+.detail-title {
+  animation: show-title 2s linear 1;
+  animation-fill-mode: backwards;  
+  animation-delay: 1s;
+  opacity: 1;
 }

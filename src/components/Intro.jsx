@@ -1,10 +1,11 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
+import THRESHOLD from '../data/constants.js'
 
 export default function Intro() {
   const { ref, inView, entry } = useInView({
     /* Optional options */
-    threshold: 0.9,
+    threshold: THRESHOLD,
   });
   console.log(entry, "this be the entry");
 

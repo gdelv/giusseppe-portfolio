@@ -7,8 +7,10 @@ function ShowContainer(props) {
         /* Optional options */
         threshold: .1,
       });
-    props.func(inView)
-      console.log(entry, 'this be the entry')
+    // if (!inView) {
+      props.func(inView)
+    // }
+      console.log(inView, 'this be the entry')
       return (
         <div ref={ref}>
           {props.children}
