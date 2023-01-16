@@ -9,9 +9,9 @@ function Contact() {
       }
     return (
         <ShowContainer func={isInView}>
-            <h2 className={inView ? "show" : "hidden hide-left"}>Get In</h2>
-            <h2 className={inView ? "show" : "hidden hide-right"}>Touch</h2>
-            {/* <h2 className={inView ? "show" : "hidden hide-right"}>giudelvecchio@gmail.com</h2> */}
+            <h2 className={inView ? "show delay-0" : "hidden hide-left"}>Get In Touch</h2>
+            {/* <h2 className={inView ? "show delay-0" : "hidden hide-right"}>Touch</h2> */}
+            <h2 className={inView ? "show delay-1" : "hidden hide-left"}>giudelvecchio@gmail.com</h2>
             {/* Social Media Links */}
         </ShowContainer>
     )

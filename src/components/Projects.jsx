@@ -19,6 +19,7 @@ function Projects() {
         //fade in information for project
     }
     const closeProject = () => {
+        console.log('clicked')
         // console.log(e.taget.name)
         setShowDetail(false)
     }
