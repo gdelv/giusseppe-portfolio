@@ -7,6 +7,8 @@ function ShowContainer(props) {
         /* Optional options */
         threshold: .1,
       });
+      console.log(entry, "this be the entry");
+
     // if (!inView) {
       props.func(inView)
     // }

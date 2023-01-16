@@ -12,6 +12,8 @@ function Projects() {
         /* Optional options */
         threshold: THRESHOLD,
     });
+    console.log(entry, "this be the entry");
+
     if (!fadeIn) {
         setFadeIn(true)
     }

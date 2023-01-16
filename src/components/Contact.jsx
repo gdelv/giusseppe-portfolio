@@ -10,6 +10,8 @@ function Contact() {
         /* Optional options */
         threshold: THRESHOLD,
       });
+      console.log(entry, "this be the entry");
+
     return (
         <div id='contact' ref={ref}>
             <h2 className={inView ? "show delay-0" : "hidden hide-left"}>Get In Touch</h2>
