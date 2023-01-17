@@ -37,8 +37,8 @@ function Projects() {
     return (
         showDetail ?
             //if inView and showDetail 
-            <div>
-                <div className='detail-title egg'>
+            <div className='detail-container' ref={ref}>
+                <div className={inView ? 'detail-title egg' : "hidden hide-right"}>
                     <h2>{currentProj.name}</h2>
                     {/* <p className={inView ? "show" : "hidden hide-right"}>test</p> */}
                     <button onClick={closeProject} className='detail-btn'>Return</button>
