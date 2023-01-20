@@ -71,7 +71,7 @@ h2 {
   background-color: #ee3325;
   color: white;
 } */
-.container > div {
+.container > div, a {
   background-color: #e63946;
   color: #f1faee;
 }
