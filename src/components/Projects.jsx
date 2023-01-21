@@ -58,7 +58,7 @@ function Projects() {
   ) : (
     //if inView and !showDetail
     <div id="projects" ref={ref}>
-      <h2 className={inView ? "show" : "hidden hide-right"}>Projects</h2>
+      <h1 className={inView ? "show" : "hidden hide-right"}>Projects</h1>
       {/* <h2 className={inView && currentProj.length === 0 ? "show" : "hidden hide-right"}>Projects</h2> */}
       <div className="projects-container">
         {projects.map((project, index) => {

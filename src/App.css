@@ -6,6 +6,12 @@ body,
   height: 100vh;
   border: 0;
 }
+h1 { 
+  padding-top: 10%;
+  height: 10%;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
 h2 {
   height: 20%;
   font-size: 1.75em;
@@ -268,12 +274,6 @@ button:hover {
 .detail-desc {
   width: 50%;
 }
-@media (max-width: 650px) {
-  .detail-desc {
-    width: 75%
-    /* font-size: ; */
-  }
-}
 .project-img {
   margin: 1em auto;
   height: 350px;
@@ -286,4 +286,13 @@ button:hover {
   width: 50%;
   justify-content: space-evenly;
   align-items: center;
+}
+@media (max-width: 650px) {
+  .detail-desc {
+    width: 75%
+    /* font-size: ; */
+  }
+  .project-img {
+    width: 90%;
+  }
 }

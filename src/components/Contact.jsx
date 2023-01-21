@@ -27,6 +27,35 @@ function Contact() {
         </a>
       </h2>
       {/* Social Media Links */}
+      <div class="sc-iCoHVE knnrxv">
+        <a
+          href="https://www.linkedin.com/in/giusseppe-del-vecchio/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="sc-fujyUd dAHnJY"
+        >
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a
+          href="https://github.com/gdelv"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="sc-fujyUd dAHnJY"
+        >
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a
+          href="mailto:giudelvecchio@gmail.com?subject=Let's Connect!&amp;body=Shoot me an email and I will respond ASAP."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="sc-fujyUd dAHnJY"
+        >
+          <i class="far fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a href="tel:+15168643657" class="sc-fujyUd dAHnJY">
+          <i class="fas fa-phone" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
   );
 }
