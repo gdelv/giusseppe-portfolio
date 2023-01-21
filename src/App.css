@@ -128,14 +128,33 @@ h2 {
 }
 .project-btn {
   width: 100px;
-  margin: 0 auto;
-  background: #1d3557;
-  color: #f1faee;
+  margin: 1em auto;
+  
 }
 .detail-btn {
-  background: #1d3557;
+  margin: 1em 0;
+}
+.detail-btn a {
+  text-decoration: none;
+  background: #f1faee;
+  color: #e63946;
+}
+.detail-btn a:hover {
+  background: #e63946;
   color: #f1faee;
 }
+button {
+  background: #f1faee;
+  color: #e63946;
+}
+button:hover {
+  background: #e63946;
+  color: #f1faee;
+  transform: scale(1.15);
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
 
 
  /* Navbar */
@@ -208,7 +227,7 @@ h2 {
   animation-delay: 4s;
   animation-fill-mode: backwards;  
   opacity: .9;
-  height: 200px;
+  height: 150px;
   width: 200px;
   text-align: center;
   top: calc(50% - 100px);
@@ -240,4 +259,19 @@ h2 {
   animation-fill-mode: backwards;  
   animation-delay: 1s;
   opacity: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.detail-desc {
+  width: 50%;
+}
+.project-img {
+  margin: 1em auto;
+  height: 350px;
+  width: 50%;
+  aspect-ratio: 2/3;
+  display: block;
 }
