@@ -10,6 +10,13 @@ export default function Intro() {
   });
   console.log(entry, "this be the entry");
 
+  let style = {
+    display: "block",
+    margin: "2em auto",
+    paddingTop: "2em",
+    width: "50px",
+    height: "50px",
+  }
   return (
     <div id="intro" ref={ref}>
       <h2
@@ -26,9 +33,21 @@ export default function Intro() {
         alt="dinosaur"
         srcset=""
       />
-      {/* <h2
+<lord-icon
+    src="https://cdn.lordicon.com/rxufjlal.json"
+    trigger="loop"
+    delay="500"
+    colors="primary:#f1faee"
+    state="hover-2"
+    style={style}
+    class={inView ? "show delay-4" : "hidden hide-right "}
+    >
+</lord-icon>
+      <p
         className={inView ? "show delay-4" : "hidden hide-right"}
-      >{`(Not an actual picture of me)`}</h2> */}
+      >
+        Scroll Down
+      </p>
     </div>
   );
 }

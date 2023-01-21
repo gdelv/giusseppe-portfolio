@@ -224,7 +224,7 @@ button:hover {
   overflow: hidden;
   background-color: #e63946;
   animation: opacity 2s linear 1;
-  animation-delay: 4s;
+  animation-delay: 4.25s;
   animation-fill-mode: backwards;  
   opacity: .9;
   height: 150px;
@@ -234,7 +234,7 @@ button:hover {
   left: calc(50% - 100px);
   z-index: 9999;
   position: absolute;
-  color: black;
+  color: #f1faee;
 }
 @keyframes show-title {
   0%   {
