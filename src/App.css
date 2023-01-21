@@ -281,3 +281,9 @@ button:hover {
   aspect-ratio: 2/3;
   display: block;
 }
+.btn-container {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+  align-items: center;
+}

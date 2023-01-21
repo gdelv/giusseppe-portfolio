@@ -45,12 +45,14 @@ function Projects() {
           className="project-img"
         />
         <p className="detail-desc">{currentProj.description}</p>
-        <button onClick={closeProject} className="detail-btn">
-          Return
-        </button>
-        <button className="detail-btn">
-            <a href={currentProj.url} target="_blank" rel="noopener noreferrer">See It Live</a>
-        </button>
+        <div className="btn-container">
+          <button onClick={closeProject} className="detail-btn">
+            Return
+          </button>
+          <button className="detail-btn">
+              <a href={currentProj.url} target="_blank" rel="noopener noreferrer">See It Live</a>
+          </button>
+        </div>
       </div>
     </div>
   ) : (
