@@ -38,7 +38,7 @@ function Projects() {
     //if inView and showDetail
     <div className="detail-container" ref={ref}>
       <div className={inView ? "detail-title" : "hidden hide-right"}>
-        <h2>{currentProj.name}</h2>
+        <h3>{currentProj.name}</h3>
         <img
           src={currentProj.img}
           alt={currentProj.name}
