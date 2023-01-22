@@ -1,7 +1,7 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
-import THRESHOLD from '../data/constants.js'
-import HEADSHOT from '../data/images/Gheadshot.jpeg'
+import THRESHOLD from "../data/constants.js";
+import HEADSHOT from "../data/images/Gheadshot.jpeg";
 
 export default function Intro() {
   const { ref, inView, entry } = useInView({
@@ -16,7 +16,7 @@ export default function Intro() {
     paddingTop: "2em",
     width: "50px",
     height: "50px",
-  }
+  };
   return (
     <div id="intro" ref={ref}>
       <h2
@@ -33,21 +33,20 @@ export default function Intro() {
         alt="dinosaur"
         srcset=""
       />
-<lord-icon
-    src="https://cdn.lordicon.com/rxufjlal.json"
-    trigger="loop"
-    delay="500"
-    colors="primary:#f1faee"
-    state="hover-2"
-    style={style}
-    class={inView ? "show delay-4" : "hidden hide-right "}
-    >
-</lord-icon>
-      <p
-        className={inView ? "show delay-4" : "hidden hide-right"}
-      >
-        Scroll Down
-      </p>
+      <div className="scroll-container">
+        <lord-icon
+          src="https://cdn.lordicon.com/rxufjlal.json"
+          trigger="loop"
+          delay="500"
+          colors="primary:#f1faee"
+          state="hover-2"
+          style={style}
+          class={inView ? "show delay-4" : "hidden hide-right "}
+        ></lord-icon>
+      </div>
+        <p className={inView ? "show delay-4 " : " hidden hide-right"}>
+          Scroll Down
+        </p>
     </div>
   );
 }

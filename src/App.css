@@ -213,6 +213,7 @@ button:hover {
   }
 }
 
+
 .egg-img {
   animation: opacity 2s linear 1;
   animation-fill-mode: forwards;  
@@ -272,6 +273,30 @@ button:hover {
   100% {
     opacity: 1; 
   }
+}
+@keyframes bounce {
+  0%   {
+    top: 0; 
+    /* top:0px; */
+  }
+  25%  {
+    top: 5em; 
+  }
+  50%  {
+    top: 1em; 
+  }
+  75%  {
+    top: 1.5em; 
+  }
+  100% {
+    top: 2em; 
+  }
+}
+.scroll-container {
+  position: relative;
+  animation: bounce 1.5s linear infinite;
+  animation-delay: 1000ms;
+
 }
 .detail-title {
   animation: show-title 2s linear 1;
