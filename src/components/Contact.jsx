@@ -13,11 +13,11 @@ function Contact() {
 
   return (
     <div id="contact" ref={ref}>
-      <h2 className={inView ? "show delay-0" : "hidden hide-left"}>
+      <h1 className={inView ? "show delay-0" : "hidden hide-left"}>
         Get In Touch
-      </h2>
+      </h1>
       {/* <h2 className={inView ? "show delay-0" : "hidden hide-right"}>Touch</h2> */}
-      <h2 className={inView ? "show delay-3" : "hidden hide-left"}>
+      {/* <h2 className={inView ? "show delay-3" : "hidden hide-left"}>
         <a
           href="mailto:giudelvecchio@gmail.com?subject=Let's Connect!&body=Shoot me an email and I will respond ASAP."
           target="_blank"
@@ -25,14 +25,14 @@ function Contact() {
         >
           giudelvecchio@gmail.com
         </a>
-      </h2>
+      </h2> */}
       {/* Social Media Links */}
-      <div class="sc-iCoHVE knnrxv">
+      <div class="social-links">
         <a
           href="https://www.linkedin.com/in/giusseppe-del-vecchio/"
           target="_blank"
           rel="noopener noreferrer"
-          class="sc-fujyUd dAHnJY"
+          className={inView ? "show delay-3" : "hidden hide-left"}
         >
           <i class="fab fa-linkedin-in" aria-hidden="true"></i>
         </a>
@@ -40,7 +40,7 @@ function Contact() {
           href="https://github.com/gdelv"
           target="_blank"
           rel="noopener noreferrer"
-          class="sc-fujyUd dAHnJY"
+          className={inView ? "show delay-3" : "hidden hide-left"}
         >
           <i class="fab fa-github" aria-hidden="true"></i>
         </a>
@@ -48,13 +48,13 @@ function Contact() {
           href="mailto:giudelvecchio@gmail.com?subject=Let's Connect!&amp;body=Shoot me an email and I will respond ASAP."
           target="_blank"
           rel="noopener noreferrer"
-          class="sc-fujyUd dAHnJY"
+          className={inView ? "show delay-3" : "hidden hide-left"}
         >
           <i class="far fa-envelope" aria-hidden="true"></i>
         </a>
-        <a href="tel:+15168643657" class="sc-fujyUd dAHnJY">
+        {/* <a href="tel:+15168643657" className={inView ? "show delay-3" : "hidden hide-left"}>
           <i class="fas fa-phone" aria-hidden="true"></i>
-        </a>
+        </a> */}
       </div>
     </div>
   );
