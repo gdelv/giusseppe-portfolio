@@ -8,11 +8,10 @@ function Projects() {
   const [showDetail, setShowDetail] = useState(false);
   const [currentProj, setCurrentProj] = useState({});
   const [fadeIn, setFadeIn] = useState(false);
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     /* Optional options */
     threshold: THRESHOLD,
   });
-  console.log(entry, "this be the entry");
 
   if (!fadeIn) {
     setFadeIn(true);

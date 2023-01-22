@@ -280,7 +280,7 @@ button:hover {
     /* top:0px; */
   }
   25%  {
-    top: 5em; 
+    top: .5em; 
   }
   50%  {
     top: 1em; 
@@ -295,7 +295,7 @@ button:hover {
 .scroll-container {
   position: relative;
   animation: bounce 1.5s linear infinite;
-  animation-delay: 1000ms;
+  animation-delay: 100ms;
 
 }
 .detail-title {
@@ -342,4 +342,15 @@ button:hover {
   .project-img {
     width: 90%;
   }
+}
+.guidebar-container {
+  position: fixed;
+  bottom: .1em;
+  left: .1em;
+}
+.guidebar-container > ul {
+  list-style: none;
+}
+.grow {
+  font-size: 2em;
 }

@@ -7,11 +7,11 @@ import { useInView } from "react-intersection-observer";
 
 export default function Loading() {
   const [showImg, setShowImg] = useState(true)
-    const { ref, inView, entry } = useInView({
+    const { ref, inView } = useInView({
         /* Optional options */
         threshold: THRESHOLD,
       });
-      console.log(entry, "this be the entry");
+      // console.log(entry, "this be the entry");
       setTimeout(() => {
         let e = document.getElementById("intro");
         // This ends the block to the window 

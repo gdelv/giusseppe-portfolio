@@ -6,11 +6,11 @@ import THRESHOLD from '../data/constants.js'
 
 function About() {
     // const [inView, setInView] = useState(false)
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     /* Optional options */
     threshold: THRESHOLD,
   });
-  console.log(entry, "this be the entry");
+  // console.log(entry, "this be the entry");
     return (
         <div id="about" ref={ref}>
             <h1 className={inView ? "show delay-0" : "hidden hide-right"}>About Me</h1>

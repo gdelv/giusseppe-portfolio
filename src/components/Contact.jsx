@@ -5,11 +5,10 @@ import THRESHOLD from "../data/constants.js";
 
 function Contact() {
   // const [inView, setInView] = useState(false)
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     /* Optional options */
     threshold: THRESHOLD,
   });
-  console.log(entry, "this be the entry");
 
   return (
     <div id="contact" ref={ref}>

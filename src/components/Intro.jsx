@@ -3,12 +3,12 @@ import { useInView } from "react-intersection-observer";
 import THRESHOLD from "../data/constants.js";
 import HEADSHOT from "../data/images/Gheadshot.jpeg";
 
-export default function Intro() {
-  const { ref, inView, entry } = useInView({
+export default function Intro(props) {
+  const { ref, inView } = useInView({
     /* Optional options */
     threshold: THRESHOLD,
   });
-  console.log(entry, "this be the entry");
+  // console.log(entry, "this be the entry");
 
   let style = {
     display: "block",
@@ -19,7 +19,7 @@ export default function Intro() {
   };
   return (
     <div id="intro" ref={ref}>
-      <h2
+      <h2 ref={props.ref}
         className={inView ? "show delay-0" : "hidden hide-left"}
       >{`Giusseppe Del Vecchio`}</h2>
       <h2
