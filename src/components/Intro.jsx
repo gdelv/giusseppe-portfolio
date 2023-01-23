@@ -34,19 +34,19 @@ export default function Intro(props) {
         srcset=""
       />
       <div className="scroll-container">
+        <p className={inView ? "scroll-title show delay-4 " : " hidden hide-right"}>
+          Scroll Down
+        </p>
         <lord-icon
           src="https://cdn.lordicon.com/rxufjlal.json"
           trigger="loop"
-          delay="500"
+          delay="0"
           colors="primary:#f1faee"
-          state="hover-2"
+          state="hover-1"
           style={style}
-          class={inView ? "show delay-4" : "hidden hide-right "}
+          class={inView ? "scroll-icon show delay-4" : "hidden hide-right "}
         ></lord-icon>
       </div>
-        <p className={inView ? "show delay-4 " : " hidden hide-right"}>
-          Scroll Down
-        </p>
     </div>
   );
 }
