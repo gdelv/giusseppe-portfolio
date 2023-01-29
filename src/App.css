@@ -60,7 +60,9 @@ h2 {
 /* scroll-snap */
 
 .y.mandatory-scroll-snapping {
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
+  /* y mandatory option creates bug (first scroll gets undone) */
+  scroll-snap-type: none;
 }
 
 .container > div {
@@ -74,7 +76,7 @@ h2 {
 .y.container > div {
   /* line-height: 256px; */
   /* font-size: 128px; */
-  width: 100%;
+  /* width: 100%; */
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -355,5 +357,5 @@ button:hover {
   list-style: none;
 }
 .grow {
-  font-size: 2em;
+  font-size: 3em;
 }
