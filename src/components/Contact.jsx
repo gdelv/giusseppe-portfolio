@@ -31,7 +31,7 @@ function Contact() {
           href="https://www.linkedin.com/in/giusseppe-del-vecchio/"
           target="_blank"
           rel="noopener noreferrer"
-          className={inView ? "show delay-3" : "hidden hide-left"}
+          className={inView ? "show delay-4" : "hidden hide-left"}
         >
           <i class="fab fa-linkedin-in" aria-hidden="true"></i>
         </a>
@@ -39,7 +39,7 @@ function Contact() {
           href="https://github.com/gdelv"
           target="_blank"
           rel="noopener noreferrer"
-          className={inView ? "show delay-3" : "hidden hide-left"}
+          className={inView ? "show delay-4" : "hidden hide-left"}
         >
           <i class="fab fa-github" aria-hidden="true"></i>
         </a>
@@ -47,7 +47,7 @@ function Contact() {
           href="mailto:giudelvecchio@gmail.com?subject=Let's Connect!&amp;body=Shoot me an email and I will respond ASAP."
           target="_blank"
           rel="noopener noreferrer"
-          className={inView ? "show delay-3" : "hidden hide-left"}
+          className={inView ? "show delay-4" : "hidden hide-left"}
         >
           <i class="far fa-envelope" aria-hidden="true"></i>
         </a>

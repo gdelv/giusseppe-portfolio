@@ -73,7 +73,7 @@ h2 {
 }
 
 
-.y.container > div {
+#intro, #about, #projects, #contact {
   /* line-height: 256px; */
   /* font-size: 128px; */
   /* width: 100%; */
@@ -110,10 +110,10 @@ h2 {
 
 .hidden {
   opacity: 0; 
-  filter: blur(5px);
+  /* filter: blur(5px); */
   /* transform: translateX(-100%); */
   /* animation-delay: 2s; */
-  transition: show 2s;
+  transition: show .9s;
 }
 .hide-left {
   transform: translateX(-100%);
@@ -123,10 +123,10 @@ h2 {
 }
 .show {
   opacity: 1;
-  filter: blur(0);
+  /* filter: blur(0); */
   transform: translateX(0);
   animation-delay: .5s;
-  transition: all 2s;
+  transition: all .9s;
 }
 .delay-0 {
   transition-delay: 0s;
@@ -248,25 +248,30 @@ button:hover {
   opacity: 0;
 }
 .loading-container {
-  background-color: #e63946;
-  height: 100vh;
+  /* background-color: #e63946;
+  background-color: yellow; */
+  /* height: 100vh; */
   width: 100%;
 }
 .welcome-banner {
   overflow: hidden;
   background-color: #e63946;
-  animation: opacity 2s linear 1;
-  animation-delay: 4.25s;
-  animation-fill-mode: backwards;  
-  opacity: .9;
-  height: 150px;
-  width: 200px;
+  animation: show-title 3s linear 1;
+  /* animation-delay: 4.25s; */
+  animation-fill-mode: backwards; 
+  transition: height 1s ease-in; 
+  /* opacity: .9; */
+  /* height: 150px; */
+  width: 100%;
   text-align: center;
-  top: calc(50% - 100px);
-  left: calc(50% - 100px);
-  z-index: 9999;
-  position: absolute;
+  /* top: calc(50% - 100px);
+  left: calc(50% - 100px); */
+  /* z-index: 9999; */
+  position: relative;
+  /* position: absolute; */
   color: #f1faee;
+  animation: bounce 1000ms linear infinite;
+
 }
 @keyframes show-title {
   0%   {
@@ -306,7 +311,7 @@ button:hover {
 .detail-title {
   animation: show-title 2s linear 1;
   animation-fill-mode: backwards;  
-  animation-delay: 1s;
+  /* animation-delay: 1s; */
   opacity: 1;
   height: 100%;
   display: flex;
