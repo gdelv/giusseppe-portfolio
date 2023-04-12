@@ -10,6 +10,23 @@ function About() {
     /* Optional options */
     threshold: THRESHOLD,
   });
+  let style = {
+    display: "block",
+    margin: "2em auto",
+    paddingTop: "2em",
+    width: "50px",
+    height: "50px",
+  }
+  const scrollToProjects = () => {
+    let e = document.getElementById("projects");
+    // This ends the block to the window 
+    // bottom and also aligns the view to the center 
+    e.scrollIntoView({
+      block: 'end',
+      behavior: 'smooth',
+      inline: 'center'
+    });
+  }
   // console.log(entry, "this be the entry");
     return (
         <div id="about" ref={ref}>
@@ -18,6 +35,20 @@ function About() {
             {/* <h2 className={inView ? "show delay-4" : "hidden hide-left"}>Learning</h2> */}
             <h2 className={inView ? "show delay-3" : "hidden hide-left"}>Creating</h2>
             <h2 className={inView ? "show delay-4" : "hidden hide-left"}>& Finding Solutions</h2>
+            <div className="scroll-container" onClick={scrollToProjects}>
+        <p className={inView ? "scroll-title show delay-4 " : " hidden hide-right"}>
+          Click to view past projects
+        </p>
+        <lord-icon
+          src="https://cdn.lordicon.com/rxufjlal.json"
+          trigger="loop"
+          delay="0"
+          colors="primary:#f1faee"
+          state="hover-1"
+          style={style}
+          class={inView ? "scroll-icon show delay-4" : "hidden hide-right "}
+        ></lord-icon>
+      </div>
         </div>
     )
 }

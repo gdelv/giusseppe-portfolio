@@ -46,7 +46,7 @@ h2 {
 .container {
   display: flex;
   /* Change overflow != auto/scroll for scroll snap to work */
-  overflow-y: scroll; 
+  overflow-y: hidden; 
   overflow-x: hidden; 
   outline: 1px dashed lightgray;
   flex: none;
@@ -60,7 +60,7 @@ h2 {
 /* scroll-snap */
 
 .y.mandatory-scroll-snapping {
-  /* scroll-snap-type: y mandatory; */
+  scroll-snap-type: y mandatory;
   /* y mandatory option creates bug (first scroll gets undone) */
   scroll-snap-type: none;
 }
@@ -192,14 +192,16 @@ button:hover {
  .navbar {
   width: 100%;
   height: 10vh;
+  display: flex;
+  flex-direction: column;
   position: fixed;
-  top: 0;
+  top: 20%;
   left: 0;
   background: transparent;
  }
  .navbar a {
   text-decoration: none;
-  color: green;
+  color: white;
   padding: 1em;
  }
  .dinosaur {

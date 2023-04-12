@@ -17,6 +17,16 @@ export default function Intro(props) {
     width: "50px",
     height: "50px",
   };
+  const scrollToAbout = () => {
+    let e = document.getElementById("about");
+        // This ends the block to the window 
+        // bottom and also aligns the view to the center 
+        e.scrollIntoView({
+          block: 'end',
+          behavior: 'smooth',
+          inline: 'center'
+        });
+  }
   return (
     <div id="intro" ref={ref}>
       <h2 ref={props.ref}
@@ -33,9 +43,9 @@ export default function Intro(props) {
         alt="dinosaur"
         srcset=""
       />
-      <div className="scroll-container">
+      <div className="scroll-container" onClick={scrollToAbout}>
         <p className={inView ? "scroll-title show delay-4 " : " hidden hide-right"}>
-          Scroll Down
+          Click to view more
         </p>
         <lord-icon
           src="https://cdn.lordicon.com/rxufjlal.json"
