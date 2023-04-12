@@ -190,7 +190,7 @@ button:hover {
 
  /* Navbar */
  .navbar {
-  width: 100%;
+  width: fit-content;
   height: 10vh;
   display: flex;
   flex-direction: column;
@@ -198,6 +198,7 @@ button:hover {
   top: 20%;
   left: 0;
   background: transparent;
+  z-index: 9999;
  }
  .navbar a {
   text-decoration: none;

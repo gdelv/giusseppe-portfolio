@@ -45,7 +45,7 @@ export default function Intro(props) {
       />
       <div className="scroll-container" onClick={scrollToAbout}>
         <p className={inView ? "scroll-title show delay-4 " : " hidden hide-right"}>
-          Click to view more
+          Click to learn more about me
         </p>
         <lord-icon
           src="https://cdn.lordicon.com/rxufjlal.json"

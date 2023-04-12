@@ -12,6 +12,12 @@ function Contact() {
 
   return (
     <div id="contact" ref={ref}>
+       {inView ?<nav className='navbar'>
+        {/* <a href="#intro">Intro</a> */}
+        <a href="#about" >About</a>
+        <a href="#projects" >Projects</a>
+        <a href="#contact" style={{textDecoration:"underline"}}>Contact</a>
+    </nav> :null}
       <h1 className={inView ? "show delay-0" : "hidden hide-left"}>
         Get In Touch
       </h1>

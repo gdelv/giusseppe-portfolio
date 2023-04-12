@@ -12,7 +12,13 @@ function Projects() {
     /* Optional options */
     threshold: THRESHOLD,
   });
-
+  let style = {
+    display: "block",
+    margin: "2em auto",
+    paddingTop: "2em",
+    width: "50px",
+    height: "50px",
+  };
   if (!fadeIn) {
     setFadeIn(true);
   }
@@ -33,6 +39,16 @@ function Projects() {
     setCurrentProj({});
     setShowDetail(false);
   };
+  const scrollToContact = () => {
+    let e = document.getElementById("contact");
+        // This ends the block to the window 
+        // bottom and also aligns the view to the center 
+        e.scrollIntoView({
+          block: 'end',
+          behavior: 'smooth',
+          inline: 'center'
+        });
+  }
   return showDetail ? (
     //if inView and showDetail
     <div className="detail-container" ref={ref}>
@@ -57,6 +73,12 @@ function Projects() {
   ) : (
     //if inView and !showDetail
     <div id="projects" ref={ref}>
+       {inView ?<nav className='navbar'>
+        {/* <a href="#intro">Intro</a> */}
+        <a href="#about" >About</a>
+        <a href="#projects" style={{textDecoration:"underline"}}>Projects</a>
+        <a href="#contact">Contact</a>
+    </nav> :null}
       <h1 className={inView ? "show" : "hidden hide-right"}>Recent Projects</h1>
       {/* <h2 className={inView && currentProj.length === 0 ? "show" : "hidden hide-right"}>Projects</h2> */}
       <div className="projects-container">
@@ -83,6 +105,20 @@ function Projects() {
             </div>
           );
         })}
+      </div>
+      <div className="scroll-container" onClick={scrollToContact}>
+        <p className={inView ? "scroll-title show delay-4 " : " hidden hide-right"}>
+          Click to view contact info
+        </p>
+        <lord-icon
+          src="https://cdn.lordicon.com/rxufjlal.json"
+          trigger="loop"
+          delay="0"
+          colors="primary:#f1faee"
+          state="hover-1"
+          style={style}
+          class={inView ? "scroll-icon show delay-4" : "hidden hide-right "}
+        ></lord-icon>
       </div>
     </div>
   );

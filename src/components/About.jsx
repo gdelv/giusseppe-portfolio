@@ -30,6 +30,13 @@ function About() {
   // console.log(entry, "this be the entry");
     return (
         <div id="about" ref={ref}>
+          {inView ?<nav className='navbar'>
+        {/* <a href="#intro">Intro</a> */}
+        <a href="#about" style={{textDecoration:"underline"}}>About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav> :null}
+          
             <h1 className={inView ? "show delay-0" : "hidden hide-right"}>About Me</h1>
             <h2 className={inView ? "show delay-2" : "hidden hide-left"}>I love Learning,</h2>
             {/* <h2 className={inView ? "show delay-4" : "hidden hide-left"}>Learning</h2> */}
@@ -37,7 +44,7 @@ function About() {
             <h2 className={inView ? "show delay-4" : "hidden hide-left"}>& Finding Solutions</h2>
             <div className="scroll-container" onClick={scrollToProjects}>
         <p className={inView ? "scroll-title show delay-4 " : " hidden hide-right"}>
-          Click to view past projects
+          Click to view recent projects
         </p>
         <lord-icon
           src="https://cdn.lordicon.com/rxufjlal.json"
