@@ -16,6 +16,7 @@ function About() {
     paddingTop: "2em",
     width: "50px",
     height: "50px",
+    transform: "rotate(180deg)"
   }
   const scrollToProjects = () => {
     let e = document.getElementById("projects");
@@ -32,25 +33,25 @@ function About() {
         <div id="about" ref={ref}>
           {inView ?<nav className='navbar'>
         {/* <a href="#intro">Intro</a> */}
-        <a href="#about" style={{textDecoration:"underline"}}>About</a>
+        <a href="#about" className='grow' style={{textDecoration:"underline"}}>About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav> :null}
           
             <h1 className={inView ? "show delay-0" : "hidden hide-right"}>About Me</h1>
-            <h2 className={inView ? "show delay-2" : "hidden hide-left"}>I love Learning,</h2>
-            {/* <h2 className={inView ? "show delay-4" : "hidden hide-left"}>Learning</h2> */}
-            <h2 className={inView ? "show delay-3" : "hidden hide-left"}>Creating</h2>
-            <h2 className={inView ? "show delay-4" : "hidden hide-left"}>& Finding Solutions</h2>
+            <h2 className={inView ? "show delay-1" : "hidden hide-left"}>My happy places are:</h2>
+            <h2 className={inView ? "show delay-2" : "hidden hide-left"}>#learning</h2>
+            <h2 className={inView ? "show delay-3" : "hidden hide-left"}>#creating</h2>
+            <h2 className={inView ? "show delay-4" : "hidden hide-left"}>#problem-solving</h2>
             <div className="scroll-container" onClick={scrollToProjects}>
         <p className={inView ? "scroll-title show delay-4 " : " hidden hide-right"}>
-          Click to view recent projects
+          Click to view my recent projects
         </p>
         <lord-icon
           src="https://cdn.lordicon.com/rxufjlal.json"
           trigger="loop"
           delay="0"
-          colors="primary:#f1faee"
+          colors="primary:#A9CEF4"
           state="hover-1"
           style={style}
           class={inView ? "scroll-icon show delay-4" : "hidden hide-right "}

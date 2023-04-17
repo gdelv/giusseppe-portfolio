@@ -16,6 +16,7 @@ export default function Intro(props) {
     paddingTop: "2em",
     width: "50px",
     height: "50px",
+    transform: "rotate(180deg)"
   };
   const scrollToAbout = () => {
     let e = document.getElementById("about");
@@ -51,7 +52,7 @@ export default function Intro(props) {
           src="https://cdn.lordicon.com/rxufjlal.json"
           trigger="loop"
           delay="0"
-          colors="primary:#f1faee"
+          colors="primary:#A9CEF4"
           state="hover-1"
           style={style}
           class={inView ? "scroll-icon show delay-4" : "hidden hide-right "}

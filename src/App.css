@@ -1,4 +1,7 @@
-
+:root {
+  --primary-color: #36494E;
+  --secondary-color: #A9CEF4;
+}
 /* setup */
 html,
 body,
@@ -9,7 +12,8 @@ body,
 h1 { 
   /* padding-top: 10%;
   height: 10%; */
-  font-size: 2.5em;
+  font-size: 30px;
+  font-weight: 700;
   margin: 0;
   padding: 0;
   text-decoration: underline;
@@ -17,7 +21,8 @@ h1 {
 }
 h2 {
   /* height: 20%; */
-  font-size: 1.75em;
+  font-size: 22px;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   display: flex;
@@ -40,7 +45,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   flex-flow: column nowrap;
-  font-family: monospace;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .container {
@@ -72,11 +77,7 @@ h2 {
   flex: none;
 }
 
-
-#intro, #about, #projects, #contact {
-  /* line-height: 256px; */
-  /* font-size: 128px; */
-  /* width: 100%; */
+#intro, #about, #projects, .detail-container, #contact {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -84,26 +85,14 @@ h2 {
 }
 .y.container > div:first-child {
   line-height: 1.3;
-  /* font-size: 64px; */
-}
-/* coloration */
-/* .container > div:nth-child(even) {
-  background-color: #ea8787;
 }
 
-.container > div:nth-child(odd) {
-  background-color: #ee3325;
-  color: white;
-} */
 .container > div, a {
-  background-color: #e63946;
-  color: #f1faee;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 #intro img {
   margin: 0 auto;
-  /* border-top-left-radius: 1em;
-  border-bottom-right-radius: 1em; */
-
   border-top-right-radius: 1em;
   border-bottom-left-radius: 1em;
 }
@@ -150,7 +139,7 @@ h2 {
 .project-card {
   font-size: 14px;
   height: 25%;
-  /* border: 1px solid white; */
+  /* border: 1px solid var(--secondary-color); */
 }
 .project-title {
   margin: 0; 
@@ -167,20 +156,20 @@ h2 {
 }
 .detail-btn a {
   text-decoration: none;
-  background: #f1faee;
-  color: #e63946;
+  background: var(--secondary-color);
+  color: var(--primary-color);
 }
 .detail-btn a:hover {
-  background: #e63946;
-  color: #f1faee;
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }
 button {
-  background: #f1faee;
-  color: #e63946;
+  background: var(--secondary-color);
+  color: var(--primary-color);
 }
 button:hover {
-  background: #e63946;
-  color: #f1faee;
+  background: var(--primary-color);
+  color: var(--secondary-color);
   transform: scale(1.15);
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -202,7 +191,7 @@ button:hover {
  }
  .navbar a {
   text-decoration: none;
-  color: white;
+  color: var(--secondary-color);
   padding: 1em;
  }
  .dinosaur {
@@ -251,14 +240,14 @@ button:hover {
   opacity: 0;
 }
 .loading-container {
-  /* background-color: #e63946;
+  /* background-color: var(--primary-color);
   background-color: yellow; */
   /* height: 100vh; */
   width: 100%;
 }
 .welcome-banner {
   overflow: hidden;
-  background-color: #e63946;
+  background-color: var(--primary-color);
   animation: show-title 3s linear 1;
   /* animation-delay: 4.25s; */
   animation-fill-mode: backwards; 
@@ -272,7 +261,7 @@ button:hover {
   /* z-index: 9999; */
   position: relative;
   /* position: absolute; */
-  color: #f1faee;
+  color: var(--secondary-color);
   animation: bounce 1000ms linear infinite;
 
 }
@@ -350,7 +339,6 @@ button:hover {
 @media (max-width: 650px) {
   .detail-desc {
     width: 75%
-    /* font-size: ; */
   }
   .project-img {
     width: 90%;
@@ -365,5 +353,5 @@ button:hover {
   list-style: none;
 }
 .grow {
-  font-size: 3em;
+  font-size: 2em;
 }

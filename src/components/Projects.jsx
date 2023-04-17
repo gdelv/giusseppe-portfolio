@@ -18,6 +18,7 @@ function Projects() {
     paddingTop: "2em",
     width: "50px",
     height: "50px",
+    transform: "rotate(180deg)"
   };
   if (!fadeIn) {
     setFadeIn(true);
@@ -53,7 +54,7 @@ function Projects() {
     //if inView and showDetail
     <div className="detail-container" ref={ref}>
       <div className={inView ? "detail-title" : "hidden hide-right"}>
-        <h3>{currentProj.name}</h3>
+        <h1>{currentProj.name}</h1>
         <img
           src={currentProj.img}
           alt={currentProj.name}
@@ -76,7 +77,7 @@ function Projects() {
        {inView ?<nav className='navbar'>
         {/* <a href="#intro">Intro</a> */}
         <a href="#about" >About</a>
-        <a href="#projects" style={{textDecoration:"underline"}}>Projects</a>
+        <a href="#projects" className='grow' style={{textDecoration:"underline"}}>Projects</a>
         <a href="#contact">Contact</a>
     </nav> :null}
       <h1 className={inView ? "show" : "hidden hide-right"}>Recent Projects</h1>
@@ -114,7 +115,7 @@ function Projects() {
           src="https://cdn.lordicon.com/rxufjlal.json"
           trigger="loop"
           delay="0"
-          colors="primary:#f1faee"
+          colors="primary:#A9CEF4"
           state="hover-1"
           style={style}
           class={inView ? "scroll-icon show delay-4" : "hidden hide-right "}
